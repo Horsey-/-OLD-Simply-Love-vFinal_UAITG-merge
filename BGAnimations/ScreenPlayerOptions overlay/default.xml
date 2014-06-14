@@ -1,5 +1,22 @@
 <ActorFrame> <children>
-
 	<Layer File="../ScreenOptions overlay" />
-
+<!-- song name text -->
+	<Layer
+		Type="ActorFrame"
+		Condition="not GAMESTATE:IsCourseMode() and Color() == 13"
+		OnCommand="addx,-SCREEN_WIDTH;decelerate,0.3;addx,SCREEN_WIDTH"
+	><children>
+		<BitmapText
+			Text="0"
+			Condition="not GAMESTATE:IsCourseMode()"
+			File="_misobold white"
+			OnCommand="shadowlength,2;horizalign,center;maxwidth,508;zoom,0.40"
+			InitCommand="%function(self)
+					self:settext(GAMESTATE:GetCurrentSong():GetDisplayMainTitle());
+					self:x(SCREEN_CENTER_X+1);
+					self:y(SCREEN_CENTER_Y-229+1);
+				end"
+			OffCommand="accelerate,0.3;addx,SCREEN_WIDTH"
+		/>
+	</children></Layer>
 </children> </ActorFrame>
