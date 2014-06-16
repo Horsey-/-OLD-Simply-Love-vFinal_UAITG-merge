@@ -181,7 +181,7 @@
 				end
 			end" 
 			SetCommand="%function(self) 
-				settext(P1Difficulty)
+				self:settext(P1Difficulty)
 			end"
 			RecentreStepsP1MessageCommand="addy,6"
 		/>
