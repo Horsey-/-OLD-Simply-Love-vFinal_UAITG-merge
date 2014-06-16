@@ -1,7 +1,7 @@
 <ActorFrame> <children>
 	<Layer
 		Type="ActorFrame"
-		Condition="Color() == 1 or Color() == 2 or Color() == 3 or Color() == 4 or Color() == 5 or Color() == 6 or Color() == 7 or Color() == 8 or Color() == 9 or Color() == 10 or Color() == 11 or Color() == 12"
+		Condition="Color() < 13"
 	><children>
 		<Layer File="ScreenWithMenuElements header"/>	
 		<Layer

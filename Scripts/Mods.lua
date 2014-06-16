@@ -1196,6 +1196,11 @@ function FrameOn(self,ThemedTitles)
 	captureIndex = 0
 	self:propagate(1)
 	for i=1,3 do self:queuecommand('Capture') end
+	if Color() == 13 then
+          self:addx(-SCREEN_WIDTH)
+          self:decelerate(0.3)
+          self:addx(SCREEN_WIDTH)
+    end
 end
 
 function FrameCapture(self) -- I had a simpler version which checked parent, but on ITG machines parent is not an argument of propagated commands.
