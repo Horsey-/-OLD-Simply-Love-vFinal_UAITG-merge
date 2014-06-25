@@ -55,7 +55,7 @@
 			Type="BitmapText"
 			Text=""
 			Font="_misoreg small"
-			OnCommand="x,SCREEN_CENTER_X-260;y,180;ShadowLength,0"
+			OnCommand="x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640+100);y,180;ShadowLength,0"
 			InitCommand="%function(self)
 				self:zoom(0.5);
 				self:maxwidth(490);
@@ -81,13 +81,13 @@
 			Type="BitmapText"
 			Font="_misoreg small"
 			Text="LENGTH"
-			OnCommand="ShadowLength,0;diffuse,#FFFFFF66;zoom,0.5;x,SCREEN_CENTER_X-160+72;y,200+19"
+			OnCommand="ShadowLength,0;diffuse,#FFFFFF66;zoom,0.5;x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640-72);y,200+19"
 		/>	
 		<Layer 
 			Type="BitmapText"
 			Font="_misoreg small"
 			Text="POP"
-			OnCommand="ShadowLength,0;diffuse,#FFFFFF66;zoom,0.5;x,SCREEN_CENTER_X-160+72-97;y,200+19"
+			OnCommand="ShadowLength,0;diffuse,#FFFFFF66;zoom,0.5;x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640+25);y,200+19"
 		/>
 	</children></Layer>
 	<ActorFrame InitCommand="%SelectMusicInit" FirstUpdateCommand="%SelectMusic" CaptureCommand="%SongInfo" CurrentSongChangedMessageCommand="queuecommand,Capture" CurrentStepsP1ChangedMessageCommand="queuecommand,Capture" CurrentStepsP2ChangedMessageCommand="queuecommand,Capture" />

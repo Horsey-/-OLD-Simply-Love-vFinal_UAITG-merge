@@ -1,72 +1,73 @@
 <ActorFrame> <children>
 <!-- SL step bubbles -->
 	<Layer Class="ActorFrame"  Condition="Color() < 13"><children>
-<!-- Player One Step Artist -->
-	<Layer
-		Type="ActorFrame"
-		Condition="GAMESTATE:IsPlayerEnabled(PLAYER_1)"
-		InitCommand="x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640+115);y,275;zoomy,0"
-		OnCommand="sleep,0.3;accelerate,0.2;zoomy,1;decelerate,0.2;zoomy,0.8;accelerate,0.1;zoomy,1"
-	><children>
+	<!-- Player One Step Artist -->
 		<Layer
-			File="stepbubble.png"
-			InitCommand="x,52;y,-19;playcommand,Set"
-			SetCommand="%function(self) self:diffuse(BubbleColorRGB(PLAYER_1)) end" 
-			CurrentSongChangedMessageCommand="playcommand,Set" 
-			CurrentStepsP1ChangedMessageCommand="playcommand,Set" 
-		/>
-		<Layer 
-			Type="BitmapText"
-			Condition="not GAMESTATE:IsCourseMode()"
-			Font="_misoreg small"
-			Text="STEPS"
-			OnCommand="y,-29;ShadowLength,0;diffuse,#000000;horizalign,right;zoom,0.5"
-		/>
-		<Layer 
-		   Font="_misobold small"
-			Text="???" 
-			OnCommand="y,-29;x,5;zoom,0.5;shadowlength,0;horizalign,left;maxwidth,250" 
-			SetCommand="%function(self) self:settext(GetStepsDescriptionText(PLAYER_1)) self:diffuse(BubbleColorText(PLAYER_1)) end" 
-			CurrentSongChangedMessageCommand="playcommand,Set" 
-			CurrentStepsP1ChangedMessageCommand="playcommand,Set" 
-		/>
-	</children></Layer>
+			Type="ActorFrame"
+			Condition="GAMESTATE:IsPlayerEnabled(PLAYER_1)"
+			InitCommand="x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640+115);y,275;zoomy,0"
+			OnCommand="sleep,0.3;accelerate,0.2;zoomy,1;decelerate,0.2;zoomy,0.8;accelerate,0.1;zoomy,1"
+		><children>
+			<Layer
+				File="stepbubble.png"
+				InitCommand="x,52;y,-19;playcommand,Set"
+				SetCommand="%function(self) self:diffuse(BubbleColorRGB(PLAYER_1)) end" 
+				CurrentSongChangedMessageCommand="playcommand,Set" 
+				CurrentStepsP1ChangedMessageCommand="playcommand,Set" 
+			/>
+			<Layer 
+				Type="BitmapText"
+				Condition="not GAMESTATE:IsCourseMode()"
+				Font="_misoreg small"
+				Text="STEPS"
+				OnCommand="y,-29;ShadowLength,0;diffuse,#000000;horizalign,right;zoom,0.5"
+			/>
+			<Layer 
+			   Font="_misobold small"
+				Text="???" 
+				OnCommand="y,-29;x,5;zoom,0.5;shadowlength,0;horizalign,left;maxwidth,250" 
+				SetCommand="%function(self) self:settext(GetStepsDescriptionText(PLAYER_1)) self:diffuse(BubbleColorText(PLAYER_1)) end" 
+				CurrentSongChangedMessageCommand="playcommand,Set" 
+				CurrentStepsP1ChangedMessageCommand="playcommand,Set" 
+			/>
+		</children></Layer>
 
-	<!-- Player Two Step Artist -->
-	<Layer
-		Type="ActorFrame"
-		Condition="GAMESTATE:IsPlayerEnabled(PLAYER_2)"
-		InitCommand="x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640-116);y,354;zoomy,0"
-		OnCommand="sleep,0.4;accelerate,0.2;zoomy,1;decelerate,0.2;zoomy,0.6;accelerate,0.1;zoomy,1"
-	><children>
+		<!-- Player Two Step Artist -->
 		<Layer
-			File="stepbubble.png"
-			InitCommand="x,-47;y,32;rotationz,180;playcommand,Set"
-			SetCommand="%function(self) self:diffuse(BubbleColorRGB(PLAYER_2)) end" 
-			CurrentSongChangedMessageCommand="playcommand,Set" 
-			CurrentStepsP2ChangedMessageCommand="playcommand,Set" 
-		/>
-		<Layer 
-			Font="_misobold small"
-			Text="???" 
-			OnCommand="y,29;x,-5;zoom,0.5;shadowlength,0;horizalign,right;maxwidth,250;zoomx,0.5;zoomy,0.1;accelerate,0.3;zoom,0.5" 
-			SetCommand="%function(self) self:settext(GetStepsDescriptionText(PLAYER_2)) self:diffuse(BubbleColorText(PLAYER_2)) end" 
-			CurrentSongChangedMessageCommand="playcommand,Set" 
-			CurrentStepsP2ChangedMessageCommand="playcommand,Set" 
-		/>
-		<Layer 
-			Type="BitmapText"
-			Condition="not GAMESTATE:IsCourseMode()"
-			Font="_misoreg small"
-			Text="STEPS"
-			OnCommand="y,29;horizalign,left;ShadowLength,0;diffuse,#000000;zoomx,0.5;zoomy,0.1;accelerate,0.3;zoom,0.5"
-		/>
+			Type="ActorFrame"
+			Condition="GAMESTATE:IsPlayerEnabled(PLAYER_2)"
+			InitCommand="x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640-116);y,354;zoomy,0"
+			OnCommand="sleep,0.4;accelerate,0.2;zoomy,1;decelerate,0.2;zoomy,0.6;accelerate,0.1;zoomy,1"
+		><children>
+			<Layer
+				File="stepbubble.png"
+				InitCommand="x,-47;y,32;rotationz,180;playcommand,Set"
+				SetCommand="%function(self) self:diffuse(BubbleColorRGB(PLAYER_2)) end" 
+				CurrentSongChangedMessageCommand="playcommand,Set" 
+				CurrentStepsP2ChangedMessageCommand="playcommand,Set" 
+			/>
+			<Layer 
+				Font="_misobold small"
+				Text="???" 
+				OnCommand="y,29;x,-5;zoom,0.5;shadowlength,0;horizalign,right;maxwidth,250;zoomx,0.5;zoomy,0.1;accelerate,0.3;zoom,0.5" 
+				SetCommand="%function(self) self:settext(GetStepsDescriptionText(PLAYER_2)) self:diffuse(BubbleColorText(PLAYER_2)) end" 
+				CurrentSongChangedMessageCommand="playcommand,Set" 
+				CurrentStepsP2ChangedMessageCommand="playcommand,Set" 
+			/>
+			<Layer 
+				Type="BitmapText"
+				Condition="not GAMESTATE:IsCourseMode()"
+				Font="_misoreg small"
+				Text="STEPS"
+				OnCommand="y,29;horizalign,left;ShadowLength,0;diffuse,#000000;zoomx,0.5;zoomy,0.1;accelerate,0.3;zoom,0.5"
+			/>
+		</children></Layer>
 	</children></Layer>
-<!-- Timer Warning -->	
+	<!-- Timer Warning -->	
 	<Layer
 		Type="ActorFrame"
 		Condition="IsTimedSet() and not GetPref('EventMode')"
-		OnCommand="x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640-92);y,SCREEN_CENTER_Y-14;queuecommand,Loop"
+		OnCommand="x,SCREEN_CENTER_X-(SCREEN_WIDTH*160/640-92);y,SCREEN_CENTER_Y-14+19;queuecommand,Loop"
 		CurrentSongChangedMessageCommand="stoptweening;queuecommand,Loop"
 		LoopCommand="%function(self)
 			if GAMESTATE:GetCurrentSong() and -Clock( TimedSet.CutOff ) < MSSMsMsToSeconds(Screen():GetChild('TotalTime'):GetText()) then
@@ -90,7 +91,6 @@
 			OnCommand="%function(self) self:diffuse(TextOnColor(-1)) end"
 			OffCommand="linear,0.2;diffusealpha,0"
 		/>
-	</children></Layer>
 	</children></Layer>
 <!-- Begin Color 13 step bubbles -->
 	<Layer Class="ActorFrame"  Condition="Color() == 13" OffCommand="accelerate,0.75;addx,SCREEN_WIDTH"><children>
@@ -171,7 +171,7 @@
 					self:y(SCREEN_TOP+236)
 					self:queuecommand('Animation')
 				else
-					self:x(SCREEN_CENTER_X-256);
+					self:x(SCREEN_CENTER_X-(SCREEN_WIDTH*160/640+96));
 					self:y(SCREEN_CENTER_Y+25.5+18);
 				end
 			end"
