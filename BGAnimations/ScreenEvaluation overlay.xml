@@ -138,27 +138,28 @@
 			OnCommand="%function(self)
 				self:addy(-6);
 				self:zoom(0.4);
-				self:maxwidth(240);
 				self:queuecommand('Set')
 				if Color() == 13 then
-					self:x(67);
+					self:x(67+7);
 					self:addy(1)
 					self:shadowlength(2);
 					self:addy(-10);
+					self:maxwidth(280);
 					self:diffuse(BubbleColorText(PLAYER_1));
 					self:horizalign('center');
 				else
 					self:x(25);
 					self:shadowlength(0);
 					self:horizalign('left');
+					self:maxwidth(300);
 				end
 			end" 
 			SetCommand="%function(self) 
-				self:settext(GetStepsDescriptionText(PLAYER_1)) 
+				self:settext(P1Difficulty..': '..GetStepsDescriptionText(PLAYER_1)) 
 			end"
 			RecentreStepsP1MessageCommand="addy,6"
 		/>		
-		<Layer 
+<!-- 		<Layer 
 			Condition="not GAMESTATE:IsCourseMode()"
 			Font="_misobold small"
 			Text="???" 
@@ -184,7 +185,7 @@
 				self:settext(P1Difficulty)
 			end"
 			RecentreStepsP1MessageCommand="addy,6"
-		/>
+		/> -->
 	</children> </Layer>
 <!-- difficulty icon and difficulty text P2 -->
 	<Layer Type="ActorFrame"

@@ -20,7 +20,10 @@
 				Condition="not GAMESTATE:IsCourseMode()"
 				Font="_misoreg small"
 				Text="STEPS"
-				OnCommand="y,-29;ShadowLength,0;diffuse,#000000;horizalign,right;zoom,0.5"
+				OnCommand="y,-29;ShadowLength,0;diffuse,#000000;horizalign,right;zoom,0.5;queuecommand,Set"
+				SetCommand="%function(self) self:diffuse(BubbleColorLabelRGB(PLAYER_1)) end"
+				CurrentSongChangedMessageCommand="playcommand,Set" 
+				CurrentStepsP1ChangedMessageCommand="playcommand,Set"
 			/>
 			<Layer 
 			   Font="_misobold small"
@@ -59,7 +62,10 @@
 				Condition="not GAMESTATE:IsCourseMode()"
 				Font="_misoreg small"
 				Text="STEPS"
-				OnCommand="y,29;horizalign,left;ShadowLength,0;diffuse,#000000;zoomx,0.5;zoomy,0.1;accelerate,0.3;zoom,0.5"
+				OnCommand="y,29;horizalign,left;ShadowLength,0;diffuse,#000000;zoomx,0.5;zoomy,0.1;accelerate,0.3;zoom,0.5;queuecommand,Set"
+				SetCommand="%function(self) self:diffuse(BubbleColorLabelRGB(PLAYER_2)) end"
+				CurrentSongChangedMessageCommand="playcommand,Set" 
+				CurrentStepsP2ChangedMessageCommand="playcommand,Set"
 			/>
 		</children></Layer>
 	</children></Layer>
