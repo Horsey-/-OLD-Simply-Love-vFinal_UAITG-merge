@@ -5,6 +5,14 @@
 		File="SimplyLove" 
 		OnCommand="draworder,301;x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,0;linear,0.4;diffusealpha,1" 
 	/>
+<!-- shadow gradient -->
+	<Layer
+		Condition="Color() == 13"
+		File="shadow" 
+		InitCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,0;linear,0.4;diffusealpha,0.7" 
+		OnCommand="%function(self) if love == 0 then self:diffusealpha(0) self:linear(0.4) self:diffusealpha(0.5) end end"
+		OffCommand="%TitleMenuOut"
+	/>
 	<Layer
 		Condition="Color() == 13"
 		File="A" 

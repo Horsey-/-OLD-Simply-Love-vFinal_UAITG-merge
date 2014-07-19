@@ -112,6 +112,14 @@
 			OnCommand="%function(self) if love == 0 then self:diffusealpha(0) self:linear(0.4) self:diffusealpha(1) end end"
 			OffCommand="%TitleMenuOut"
 		/>
+	<!-- shadow gradient -->
+		<Layer
+			Condition="Color() == 13"
+			File="../ScreenLove underlay/shadow" 
+			InitCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;diffusealpha,0.7" 
+			OnCommand="%function(self) if love == 0 then self:diffusealpha(0) self:linear(0.4) self:diffusealpha(0.5) end end"
+			OffCommand="%TitleMenuOut"
+		/>
 	<!-- Theme 13 logo -->
 		<Layer
 			Condition="Color() == 13"

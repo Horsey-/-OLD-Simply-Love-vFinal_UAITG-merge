@@ -26,7 +26,7 @@
 				CurrentStepsP1ChangedMessageCommand="playcommand,Set"
 			/>
 			<Layer 
-			   Font="_misobold small"
+			    Font="_misobold small"
 				Text="???" 
 				OnCommand="y,-29;x,5;zoom,0.5;shadowlength,0;horizalign,left;maxwidth,250" 
 				SetCommand="%function(self) self:settext(GetStepsDescriptionText(PLAYER_1)) self:diffuse(BubbleColorText(PLAYER_1)) end" 

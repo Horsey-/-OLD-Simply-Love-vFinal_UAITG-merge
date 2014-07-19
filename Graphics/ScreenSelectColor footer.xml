@@ -8,6 +8,6 @@
 		File="../BGAnimations/_13assets/bottombar.png"
 		Condition="Color() == 13"
 		InitCommand="draworder,-400"
-		OnCommand="y,SCREEN_BOTTOM+113;x,SCREEN_CENTER_X;decelerate,0.75;addy,-50"
+		OnCommand="zoomtowidth,SCREEN_WIDTH+1;y,SCREEN_BOTTOM+113;x,SCREEN_CENTER_X;decelerate,0.75;addy,-50"
 	/>
 </children> </ActorFrame>

@@ -1,10 +1,4 @@
 <ActorFrame> <children>
-<!-- background -->
-	<Layer
-		Type="AutoActor"
-		File="@THEME:GetPath(EC_BGANIMATIONS,'','_shared background normal')"
-		InitCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;"
-	/>
 	<ActorFrame Command="queuecommand,Icon" IconCommand="%function() StyleIcon() end" />
 	<ActorFrame Command="%function() if GAMESTATE:GetCoinMode() == 1 and not GAMESTATE:IsEventMode() then rateMods = rateModsPay else rateMods = rateModsFree end end" />	
 	<Layer 
